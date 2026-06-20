@@ -6,6 +6,6 @@
   "description": "MCP server exposing the System Design Assistant — make_diagram, draft_adr, analyze_tradeoffs, list_questions, grade_answer — so any MCP host/agent can design systems, draft ADRs, and practice interviews.",
   "bin": { "system-design-assistant-mcp": "src/server.ts" },
   "scripts": { "start": "node src/server.ts", "smoke": "node scripts/smoke.ts" },
-  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0", "zod": "^3.23.0" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0", "zod": "^4.4.3" },
   "engines": { "node": ">=22.18" }
 }
