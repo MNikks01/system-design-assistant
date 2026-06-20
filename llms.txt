@@ -1,0 +1,18 @@
+# AI System Design Assistant
+
+> AI co-architect: interactive system design grounded in your real codebase (via Codebase Intelligence #2), auto-generated Mermaid diagrams + ADRs + tradeoff analysis + persistent design memory; plus an AI system-design interview-prep mode. Project #6 of the AI Startup Lab; a ContextOS (#1) module + standalone interview-prep product. Spec-first; no code yet.
+
+## Core
+- [README](./README.md), [VISION](./VISION.md), [PROBLEM](./PROBLEM.md), [CUSTOMERS](./CUSTOMERS.md), [FEATURES](./FEATURES.md), [USER_STORIES](./USER_STORIES.md)
+## Engineering
+- [ARCHITECTURE](./ARCHITECTURE.md), [TECH_STACK](./TECH_STACK.md), [DATABASE](./DATABASE.md), [API_DESIGN](./API_DESIGN.md), [AI_ARCHITECTURE](./AI_ARCHITECTURE.md), [RAG](./RAG.md) (grounding via #2), [MCP](./MCP.md), [AGENT_DESIGN](./AGENT_DESIGN.md)
+## Production
+- [SECURITY](./SECURITY.md), [OBSERVABILITY](./OBSERVABILITY.md), [GUARDRAILS](./GUARDRAILS.md), [DEVOPS](./DEVOPS.md)
+## Execution
+- [TASKS](./TASKS.md), [SPRINTS](./SPRINTS.md) (MVP ≈6 wks)
+## Business
+- [PRICING](./PRICING.md), [GTM](./GTM.md), [SALES](./SALES.md), [RISKS](./RISKS.md), [HIRING](./HIRING.md), [OPEN_SOURCE](./OPEN_SOURCE.md), [RESUME_VALUE](./RESUME_VALUE.md)
+## For agents
+- [CLAUDE.md](./CLAUDE.md), [AGENTS.md](./AGENTS.md), [mcp.json](./mcp.json)
+## Differentiator
+Codebase-grounded design (not generic chatbot advice) + persistent ADRs/diagrams + two markets (enterprise architecture + interview prep).

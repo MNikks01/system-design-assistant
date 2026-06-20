@@ -1,0 +1,36 @@
+# System Design Assistant — USER STORIES
+
+Personas: **Eng**, **Architect**, **Lead**, **Prepper**, **Team**. Tags `[MVP|V1|V2|V3]`.
+
+1. As an Eng, I want to describe a problem and get design options, so that I explore approaches. [MVP]
+2. As an Eng, I want a Mermaid architecture diagram generated, so that I visualize the design. [MVP]
+3. As an Eng, I want sequence/ER diagrams too, so that I cover different views. [MVP]
+4. As an Architect, I want an ADR drafted (context/decision/consequences), so that decisions are recorded. [MVP]
+5. As an Architect, I want tradeoff analysis (scale/consistency/cost), so that I choose well. [MVP]
+6. As an Eng, I want to iterate on a design conversationally, so that it evolves. [MVP]
+7. As an Eng, I want to export designs to Markdown, so that they live in our docs. [MVP]
+8. As an Architect, I want the design grounded in our real codebase, so that it's relevant not generic. [V1]
+9. As a Lead, I want persistent, versioned design memory, so that decisions don't evaporate. [V1]
+10. As a Prepper, I want an AI interviewer to run a system-design interview, so that I practice. [V1]
+11. As a Prepper, I want rubric-based feedback, so that I improve. [V1]
+12. As a Prepper, I want common interview scenarios (URL shortener, feed, chat), so that I prep breadth. [V1]
+13. As a Team, I want shared designs, so that we collaborate. [V1]
+14. As an Architect, I want export to Confluence/Notion, so that docs live where the team looks. [V1]
+15. As an Eng, I want diagram-as-code files (Mermaid), so that diagrams are versionable. [MVP]
+16. As an Architect, I want pattern templates, so that I start from proven designs. [V1]
+17. As an Architect, I want a multi-agent design review (architect + critic), so that designs are stress-tested. [V2]
+18. As an Eng, I want back-of-envelope cost/scaling estimates, so that designs are realistic. [V2]
+19. As a Lead, I want designs as ContextOS team context, so that they inform AI-assisted work. [V2]
+20. As an Architect, I want ADRs linked to code/decisions, so that rationale is traceable. [V2]
+21. As an Architect, I want "does code still match the design?" drift detection, so that docs stay honest. [Future]
+22. As an Eng, I want a free tier, so that I evaluate. [MVP]
+23. As a Prepper, I want self-serve Pro for prep, so that I unlock scenarios. [V1]
+24. As an Architect, I want answers that cite our real components, so that I trust them. [V1]
+25. As an Eng, I want to compare two design options side by side, so that I decide. [V1]
+26. As a Lead, I want enterprise governance over design standards, so that teams align. [V3]
+27. As an Architect, I want SSO + on-prem, so that enterprise policy is met. [V3]
+28. As a Prepper, I want progress tracking across sessions, so that I see improvement. [V1]
+29. As an Eng, I want to ask "how would this scale to 10x?", so that I plan ahead. [V1]
+30. As an Architect, I want versioned design diffs, so that I see how the architecture evolved. [V2]
+
+*Drives [TASKS.md](./TASKS.md). MVP = design chat + diagrams + ADRs + tradeoffs.*

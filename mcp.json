@@ -1,0 +1,18 @@
+{
+  "$comment": "System Design Assistant MCP config template. Consumes 'codebase-intel' (#2) for grounding; optionally exposes 'design-assistant' tools. Replace ${VARS} from your environment/secret manager — never commit real tokens.",
+  "mcpServers": {
+    "design-assistant": {
+      "url": "https://api.sysdesign.dev/mcp",
+      "transport": "streamable-http",
+      "headers": { "Authorization": "Bearer ${SYSDESIGN_API_KEY}" },
+      "description": "Propose system designs, draft ADRs, generate diagrams, recall design memory.",
+      "tools": ["propose_design", "draft_adr", "generate_diagram", "get_design_memory"]
+    },
+    "codebase-intel": {
+      "$comment": "Grounding source (#2): designs reference real code.",
+      "url": "https://api.codebase-intel.dev/mcp",
+      "transport": "streamable-http",
+      "headers": { "Authorization": "Bearer ${CI_API_KEY}", "X-Repo-Id": "${REPO_ID}" }
+    }
+  }
+}
