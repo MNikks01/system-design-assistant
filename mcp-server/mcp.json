@@ -1,0 +1,9 @@
+{
+  "$comment": "Client config for the System Design Assistant MCP server. Use an ABSOLUTE path.",
+  "mcpServers": {
+    "system-design-assistant": {
+      "command": "node",
+      "args": ["/abs/path/to/system-design-assistant/mcp-server/src/server.ts"]
+    }
+  }
+}
