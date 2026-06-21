@@ -18,7 +18,7 @@ export default function Home() {
 
       <div className="mt-6 flex gap-1 border-b border-zinc-200 dark:border-zinc-800">
         {TABS.map((t) => (
-          <button
+          <button type="button"
             key={t}
             onClick={() => setTab(t)}
             className={`px-3 py-2 text-sm ${tab === t ? "border-b-2 border-black font-medium dark:border-white" : "text-zinc-500"}`}
@@ -52,14 +52,14 @@ function Diagram() {
   return (
     <div>
       <div className="flex gap-2">
-        <select value={pattern} onChange={(e) => setPattern(e.target.value)} className="rounded-md border border-zinc-300 px-2 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
+        <select value={pattern} onChange={(e) => setPattern(e.target.value)} aria-label="Diagram pattern" className="rounded-md border border-zinc-300 px-2 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
           <option value="scalable-web">scalable-web</option>
           <option value="event-driven">event-driven</option>
         </select>
-        <button onClick={run} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Generate Mermaid</button>
+        <button type="button" onClick={run} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Generate Mermaid</button>
       </div>
       {out && <Out text={out} />}
-      {out && <p className="mt-1 text-xs text-zinc-400">Paste into any Mermaid viewer (or a GitHub markdown ```mermaid block) to render.</p>}
+      {out && <p className="mt-1 text-xs text-zinc-500">Paste into any Mermaid viewer (or a GitHub markdown ```mermaid block) to render.</p>}
     </div>
   );
 }
@@ -75,11 +75,11 @@ function Adr() {
   const inp = "w-full rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900";
   return (
     <div className="space-y-2">
-      <input className={inp} value={f.title} onChange={(e) => setF({ ...f, title: e.target.value })} placeholder="title" />
-      <textarea className={inp} rows={2} value={f.context} onChange={(e) => setF({ ...f, context: e.target.value })} placeholder="context" />
-      <textarea className={inp} rows={2} value={f.decision} onChange={(e) => setF({ ...f, decision: e.target.value })} placeholder="decision" />
-      <textarea className={inp} rows={2} value={f.alternatives} onChange={(e) => setF({ ...f, alternatives: e.target.value })} placeholder="alternatives (one per line)" />
-      <button onClick={run} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Draft ADR</button>
+      <input className={inp} value={f.title} onChange={(e) => setF({ ...f, title: e.target.value })} aria-label="title" placeholder="title" />
+      <textarea className={inp} rows={2} value={f.context} onChange={(e) => setF({ ...f, context: e.target.value })} aria-label="context" placeholder="context" />
+      <textarea className={inp} rows={2} value={f.decision} onChange={(e) => setF({ ...f, decision: e.target.value })} aria-label="decision" placeholder="decision" />
+      <textarea className={inp} rows={2} value={f.alternatives} onChange={(e) => setF({ ...f, alternatives: e.target.value })} aria-label="alternatives (one per line)" placeholder="alternatives (one per line)" />
+      <button type="button" onClick={run} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Draft ADR</button>
       {out && <Out text={out} />}
     </div>
   );
@@ -101,7 +101,7 @@ function Tradeoffs() {
   return (
     <div>
       <p className="text-sm text-zinc-500">Example: Postgres vs DynamoDB across scalability/consistency/cost.</p>
-      <button onClick={run} className="mt-2 rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Analyze tradeoffs</button>
+      <button type="button" onClick={run} className="mt-2 rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Analyze tradeoffs</button>
       {out && <Out text={out} />}
     </div>
   );
@@ -123,11 +123,11 @@ function Interview() {
   }
   return (
     <div className="space-y-2">
-      <select value={qid} onChange={(e) => setQid(e.target.value)} className="w-full rounded-md border border-zinc-300 px-2 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
+      <select value={qid} onChange={(e) => setQid(e.target.value)} aria-label="Interview question" className="w-full rounded-md border border-zinc-300 px-2 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
         {questions.map((q) => <option key={q.id} value={q.id}>{q.prompt}</option>)}
       </select>
-      <textarea value={answer} onChange={(e) => setAnswer(e.target.value)} rows={4} className="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900" placeholder="your answer…" />
-      <button onClick={run} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Grade answer</button>
+      <textarea value={answer} onChange={(e) => setAnswer(e.target.value)} rows={4} className="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900" aria-label="your answer…" placeholder="your answer…" />
+      <button type="button" onClick={run} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black">Grade answer</button>
       {grade && (
         <div className="rounded-md border border-zinc-200 p-3 text-sm dark:border-zinc-800">
           <div className="font-semibold">Score: {(grade.score * 100).toFixed(0)}%</div>
