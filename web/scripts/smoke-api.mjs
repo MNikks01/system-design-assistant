@@ -1,5 +1,8 @@
 // End-to-end web API proof for the System Design Assistant. No browser, no keys.
 const BASE = process.env.BASE || "http://localhost:3995";
+const __h = await fetch(BASE + "/api/health").then((r) => r.json()).catch(() => ({}));
+if (__h.status !== "ok") throw new Error("health check failed");
+console.log("\u2713 /api/health -> ok");
 const post = (p, b) => fetch(BASE + p, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(b) });
 
 // 1) diagram
