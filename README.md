@@ -8,6 +8,15 @@
 
 **▶ Try it / deploy your own:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMNikks01%2Fsystem-design-assistant&root-directory=web&project-name=system-design-assistant) · see [DEPLOY.md](./DEPLOY.md) for CLI & self-hosting.
 
+**🖥️ CLI:** diagrams, ADRs, tradeoff tables, and interview prep from JSON specs:
+```bash
+node engine/src/cli.ts pattern scalable-web    # built-in reference architecture (Mermaid)
+node engine/src/cli.ts diagram arch.json
+node engine/src/cli.ts adr adr.json
+node engine/src/cli.ts tradeoffs tradeoffs.json
+node engine/src/cli.ts questions
+```
+
 
 > **Your AI co-architect.** Interactive system design, diagrams, ADRs, and tradeoff analysis — grounded in *your* codebase. Two markets: enterprise architecture and interview prep.
 

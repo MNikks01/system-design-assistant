@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "description": "System Design Assistant (#6) engine — generate architecture diagrams (Mermaid), ADRs, weighted tradeoff analysis, persisted design memory, and interview-prep grading. Node native TypeScript; zero-network.",
+  "bin": { "sysdesign": "src/cli.ts" },
   "scripts": {
+    "cli": "node src/cli.ts",
     "demo": "node scripts/demo.ts",
     "test": "node --test test/*.test.ts"
   },
