@@ -1,5 +1,19 @@
 # System Design Assistant — engine (Phase A) ✅
 
+## Install & CLI
+
+diagrams, ADRs, tradeoff tables, and interview prep. Requires Node ≥23.6 (runs on Node's native TypeScript).
+
+```bash
+npm i -g @mnikks01/sysdesign    # then run `sysdesign …`, or use npx without installing:
+npx @mnikks01/sysdesign pattern scalable-web    # built-in reference architecture (Mermaid)
+npx @mnikks01/sysdesign diagram arch.json
+npx @mnikks01/sysdesign adr adr.json
+npx @mnikks01/sysdesign tradeoffs tradeoffs.json
+npx @mnikks01/sysdesign questions
+```
+
+
 The core engine for project #6, your **AI co-architect**. Generate architecture diagrams
 (**Mermaid**), draft **ADRs**, run **weighted tradeoff analysis**, persist + iterate **design
 memory**, and practice with an **interview-prep** grader. Pure TypeScript, **Node 24 native TS,

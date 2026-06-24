@@ -8,14 +8,16 @@
 
 **▶ Try it / deploy your own:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMNikks01%2Fsystem-design-assistant&root-directory=web&project-name=system-design-assistant) · see [DEPLOY.md](./DEPLOY.md) for CLI & self-hosting.
 
-**🖥️ CLI:** diagrams, ADRs, tradeoff tables, and interview prep from JSON specs:
+**🖥️ CLI:** diagrams, ADRs, tradeoff tables, and interview prep — published on npm (needs Node ≥23.6):
 ```bash
-node engine/src/cli.ts pattern scalable-web    # built-in reference architecture (Mermaid)
-node engine/src/cli.ts diagram arch.json
-node engine/src/cli.ts adr adr.json
-node engine/src/cli.ts tradeoffs tradeoffs.json
-node engine/src/cli.ts questions
+npm i -g @mnikks01/sysdesign    # installs the `sysdesign` command — or use npx (no install) below
+npx @mnikks01/sysdesign pattern scalable-web    # built-in reference architecture (Mermaid)
+npx @mnikks01/sysdesign diagram arch.json
+npx @mnikks01/sysdesign adr adr.json
+npx @mnikks01/sysdesign tradeoffs tradeoffs.json
+npx @mnikks01/sysdesign questions
 ```
+From a clone instead: `node engine/src/cli.ts <args>`.
 
 
 > **Your AI co-architect.** Interactive system design, diagrams, ADRs, and tradeoff analysis — grounded in *your* codebase. Two markets: enterprise architecture and interview prep.
