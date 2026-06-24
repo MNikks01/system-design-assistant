@@ -2,7 +2,7 @@
 
 ## Install & CLI
 
-diagrams, ADRs, tradeoff tables, and interview prep. Requires Node ≥23.6 (runs on Node's native TypeScript).
+diagrams, ADRs, tradeoff tables, and interview prep. Requires Node ≥18.
 
 ```bash
 npm i -g @mnikks01/sysdesign    # then run `sysdesign …`, or use npx without installing:
